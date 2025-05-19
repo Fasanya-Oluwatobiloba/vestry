@@ -72,9 +72,9 @@ const TestimonialSection = () => {
           </AnimateOnScroll>
           <div className="flex justify-between flex-wrap items-center gap-6 grayscale">
             {logos.map((logos, idx) => (
+              <div key={idx}>
               <AnimateOnScroll key={idx} delay={0.2}>
                 <Image
-                  key={idx}
                   src={logos.image.src}
                   alt={`Partner logo ${idx + 1}`}
                   width={100}
@@ -82,6 +82,7 @@ const TestimonialSection = () => {
                   className="h-10 object-contain"
                 />
               </AnimateOnScroll>
+              </div>
             ))}
           </div>
         </div>
