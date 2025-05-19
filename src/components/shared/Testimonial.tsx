@@ -72,7 +72,7 @@ const TestimonialSection = () => {
           </AnimateOnScroll>
           <div className="flex justify-between flex-wrap items-center gap-6 grayscale">
             {logos.map((logos, idx) => (
-              <AnimateOnScroll delay={0.2}>
+              <AnimateOnScroll key={idx} delay={0.2}>
                 <Image
                   key={idx}
                   src={logos.image.src}
