@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import branding from "../../../public/branding.png";
 import business from "../../../public/business.png";
 import growth from "../../../public/growth.png";
+import Image from "next/image";
 
 const services = [
   {
@@ -74,7 +75,7 @@ const ServicesPage = () => {
         <div className="grid md:grid-cols-3 gap-6 my-16">
           {services.map((service, index) => (
             <Card key={index} className="overflow-hidden text-black">
-              <img
+              <Image
                 src={service.image.src}
                 alt={service.title}
                 className="w-full lg:h-80 h-52 object-cover"

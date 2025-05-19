@@ -6,7 +6,6 @@ export default function Hero() {
   return (
     <section className="w-full pb-12 lg:pt-24 md:pt-16 pt-24 px-5 bg-gray-100">
       <div className="xl:w-[90%] 2xl:w-[75%] mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
-        {/* Left Text Content */}
         <div className="space-y-6">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900">
             Empowering ideas building futures.
@@ -16,7 +15,7 @@ export default function Hero() {
           </p>
           <div className="flex gap-4">
             <Button variant="default" className="animate-slide-up transition-all duration-500 hover:bg-white hover:text-black">
-              Let’s get started
+              Lets get started
             </Button>
             <Button variant="outline" className="animate-slide-up transition-all duration-500 hover:bg-black hover:text-white">
               About us

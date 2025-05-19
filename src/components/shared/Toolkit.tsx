@@ -22,7 +22,6 @@ const ToolkitSection = () => {
   return (
     <section className="bg-gray-50 py-20 px-4">
       <div className="xl:w-[90%] 2xl:w-[75%] mx-auto grid md:grid-cols-2 lg:gap-10 gap-8 items-center">
-        {/* Left Content */}
         <div>
           <h2 className="text-4xl md:text-3xl xl:text-5xl font-semibold text-gray-900 mb-4">
             We provide the ultimate <br /> toolkit for entrepreneurs.
@@ -41,7 +40,7 @@ const ToolkitSection = () => {
             ))}
           </div>
 
-          <Button className="mt-6 py-4 px-8" variant="default">Let's get started</Button>
+          <Button className="mt-6 py-4 px-8" variant="default">Lets get started</Button>
         </div>
 
         <div className="relative rounded-xl overflow-hidden shadow-lg lg:w-[460px] xl:w-[520px]">
