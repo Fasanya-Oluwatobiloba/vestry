@@ -37,7 +37,7 @@ export default function Hero() {
           />
           <div className="absolute bottom-4 left-4 bg-white p-4 rounded-md shadow-md max-w-xs text-sm">
             <p>
-              "Vestry gave me the confidence and tools to turn my side hustle into a full-time business. Community support was exactly what I needed."
+              Vestry gave me the confidence and tools to turn my side hustle into a full-time business. Community support was exactly what I needed.
             </p>
             <p className="mt-2 text-gray-500">Emily R., Founder of Bloom 🌿🚀</p>
           </div>
