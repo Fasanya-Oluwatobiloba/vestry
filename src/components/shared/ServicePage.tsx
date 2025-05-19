@@ -1,10 +1,11 @@
 import React from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import branding from "../../../public/branding.png";
 import business from "../../../public/business.png";
 import growth from "../../../public/growth.png";
-import Image from "next/image";
+import { AnimateOnScroll } from "./AnimateScroll";
 
 const services = [
   {
@@ -54,57 +55,82 @@ const ServicesPage = () => {
       <div className="xl:w-[90%] 2xl:w-[75%] mx-auto">
         <div className="md:flex items-center justify-between my-10">
           <div>
-            <h2 className="text-sm font-semibold">
-              We offer everything you need to launch and scale your business
-            </h2>
+            <AnimateOnScroll delay={0.2}>
+              <h2 className="text-sm font-semibold">
+                We offer everything you need to launch and scale your business
+              </h2>
+            </AnimateOnScroll>
 
-            <h1 className="md:text-2xl hidden md:block text-xl font-bold mt-2">
-              Our services are designed to guide entrepreneurs <br />
-              at every stage, from idea to growth.
-            </h1>
-            <h1 className="md:text-2xl md:hidden text-xl font-bold mt-2">
-              Our services are designed to guide entrepreneurs
-              at every stage, from idea to growth.
-            </h1>
+            <AnimateOnScroll delay={0.2}>
+              <h1 className="md:text-2xl hidden md:block text-xl font-bold mt-2">
+                Our services are designed to guide entrepreneurs <br />
+                at every stage, from idea to growth.
+              </h1>
+            </AnimateOnScroll>
+            <AnimateOnScroll delay={0.2}>
+              <h1 className="md:text-2xl md:hidden text-xl font-bold mt-2">
+                Our services are designed to guide entrepreneurs at every stage,
+                from idea to growth.
+              </h1>
+            </AnimateOnScroll>
           </div>
-          <Button className="hidden md:block animate-slide-up transition-all duration-500 hover:bg-black hover:text-white px-6 py-4" variant="outline">
-            All Services
-          </Button>
+          <AnimateOnScroll delay={0.2}>
+            <Button
+              className="hidden md:block animate-slide-up transition-all duration-500 hover:bg-black hover:text-white px-6 py-4"
+              variant="outline"
+            >
+              All Services
+            </Button>
+          </AnimateOnScroll>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 my-16">
           {services.map((service, index) => (
             <Card key={index} className="overflow-hidden text-black">
-              <Image
-                src={service.image.src}
-                alt={service.title}
-                className="w-full lg:h-80 h-52 object-cover"
-              />
-              <CardContent className="p-4">
-                <h3 className="font-semibold text-lg">{service.title}</h3>
-                <p className="text-sm mt-2">{service.description}</p>
-                <Button className="animate-slide-up transition-all duration-500 hover:bg-white hover:text-black my-6" variant="default">
-                  Learn more
-                </Button>
-              </CardContent>
+              <AnimateOnScroll delay={0.2}>
+                <Image
+                  src={service.image.src}
+                  alt={service.title}
+                  width={500}
+                  height={300}
+                  className="w-full lg:h-80 h-52 object-cover"
+                />
+                <CardContent className="p-4">
+                  <h3 className="font-semibold text-lg">{service.title}</h3>
+                  <p className="text-sm mt-2">{service.description}</p>
+                  <Button
+                    className="animate-slide-up transition-all duration-500 hover:bg-white hover:text-black my-6"
+                    variant="default"
+                  >
+                    Learn more
+                  </Button>
+                </CardContent>
+              </AnimateOnScroll>
             </Card>
           ))}
 
-          <Button className="md:hidden animate-slide-up transition-all duration-500 hover:bg-black hover:text-white px-6 py-4" variant="default">
-            All Services
-          </Button>
+          <AnimateOnScroll delay={0.2}>
+            <Button
+              className="md:hidden animate-slide-up transition-all duration-500 hover:bg-black hover:text-white px-6 py-4"
+              variant="default"
+            >
+              All Services
+            </Button>
+          </AnimateOnScroll>
         </div>
 
         <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-white my-6">
           {steps.map((step) => (
             <div key={step.number} className="space-y-2">
-              <div className="flex items-center">
-                <div className="text-black bg-white w-9 h-9 rounded-lg flex items-center justify-center">
-                  {step.number}
+              <AnimateOnScroll key={step.number} delay={0.2}>
+                <div className="flex items-center">
+                  <div className="text-black bg-white w-9 h-9 rounded-lg flex items-center justify-center">
+                    {step.number}
+                  </div>
+                  <h4 className="font-semibold ml-3 text-2xl">{step.title}</h4>
                 </div>
-                <h4 className="font-semibold ml-3 text-2xl">{step.title}</h4>
-              </div>
-              <p className="text-base text-gray-200">{step.text}</p>
+                <p className="text-base text-gray-200">{step.text}</p>
+              </AnimateOnScroll>
             </div>
           ))}
         </div>
